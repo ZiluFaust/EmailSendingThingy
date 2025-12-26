@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gửi Email Thật - Nhóm 2</title>
+		<style>
+			body {
+				font-family: Arial;
+				padding: 20px;
+				background: #f4f4f4;
+			}
+			.form-container {
+				background: white;
+				padding: 20px;
+				border-radius: 8px;
+				width: 350px;
+			}
+			input,
+			textarea {
+				width: 100%;
+				margin: 10px 0;
+				padding: 8px;
+				border: 1px solid #ccc;
+			}
+			button {
+				background: #28a745;
+				color: white;
+				border: none;
+				padding: 10px;
+				cursor: pointer;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="form-container">
+			<h3>Gửi Hóa Đơn Game - Nhóm 2</h3>
+
+			<label>Email người nhận *</label>
+			<input type="email" id="to_email" placeholder="ví dụ: khachhang@gmail.com" required />
+
+			<label>Nội dung mã Key *</label>
+			<textarea id="message" placeholder="Dán mã kích hoạt game vào đây..." required></textarea>
+
+			<hr />
+			<p><small>Thông tin bổ sung (Không bắt buộc):</small></p>
+
+			<label>Mã đơn hàng (Order ID)</label>
+			<input type="text" id="order_id" placeholder="ví dụ: BILL-12345" />
+
+			<label>Tên sản phẩm</label>
+			<input type="text" id="name" placeholder="ví dụ: Elden Ring" />
+
+			<label>Giá tiền</label>
+			<input type="text" id="price" placeholder="ví dụ: 999.000" />
+
+			<label>Số lượng</label>
+			<input type="number" id="units" value="1" />
+
+			<button onclick="sendMail()">Gửi Email Ngay</button>
+		</div>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+		<script src="script.js"></script>
+	</body>
+</html>
